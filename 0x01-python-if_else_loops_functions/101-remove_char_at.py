@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def remove_char_at(str, n):
     str_copy = list()
-    frm_to = len(str) 
+    frm_to = len(str)
     for letter in range(frm_to):
         if letter == n:
             continue
