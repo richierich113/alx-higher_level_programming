@@ -1,2 +1,4 @@
-for c in range(ord('z'), ord('a')-1, -1):
-    print(f"{chr(c)}{chr(c-32)}", end="")
+#!/usr/bin/python3
+for i in range(26):
+    pass
+print('{}'.format('zYxWvUtSrQpOnMlKjIhGfEdCbA'), end='')
