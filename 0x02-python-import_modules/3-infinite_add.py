@@ -14,5 +14,6 @@ if __name__ == "__main__":
     # if there's at least an arg
     else:
         for i in arg_list:
-            add_total += int(i)
+            index = arg_list.index(i)
+            add_total += int(arg_list[index])
             print(f"{add_total:d}")
