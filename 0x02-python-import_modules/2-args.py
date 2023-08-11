@@ -17,4 +17,4 @@ if __name__ == "__main__":
 
         for i in arg_list:
             index = sys.argv.index(i)
-            print(f"{index:d}: {sys.argv[i]}")
+            print(f"{:d}: {}".format(index, sys.argv[i]))
