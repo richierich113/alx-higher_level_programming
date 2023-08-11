@@ -15,5 +15,6 @@ if __name__ == "__main__":
     else:
         print(f"{arg_length} arguments:")
 
-        for index, arg_val in enumerate(arg_list, start=1):
-            print(f"{index}: {arg_val}")
+        for i in arg_list:
+            index = sys.argv.index(i)
+            print(f"{index}: {sys.argv[i]}")
