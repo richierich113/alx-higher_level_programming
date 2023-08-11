@@ -8,7 +8,10 @@ if __name__ == "__main__":
     arg_list = sys.argv[1:]
 
     if arg_length == 0:
-        print("0 arguments.".format(arg_length))
+        print("0 arguments.")
+    elif arg_length == 1:
+        print("1 argument:")
+        print("1: {}".format(sys.argv[1]))
     else:
         print(f"{arg_length} arguments:")
 
