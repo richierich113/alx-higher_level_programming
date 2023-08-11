@@ -11,13 +11,8 @@ if __name__ == "__main__":
     # if no arg
     if arg_length == 0:
         print(add_total)
-    # if one arg
-    elif arg_length == 1:
-        total = add_total + int(argv[1])
-        print("{}".format(total))
-    # if multiple args
+    # if there's at least an arg
     else:
         for i in arg_list:
             add_total += int(i)
             print(f"{add_total:d}")
-        
