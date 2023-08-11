@@ -4,7 +4,7 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    arg_length = len(sys.argv) - 1
+    arg_length = len(argv) - 1
     arg_list = argv[1:]
     add_total = 0
 
