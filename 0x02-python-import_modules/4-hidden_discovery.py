@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # program that prints all names defined by the compiled module hidden_4.pyc
-#  that do not start with "__" in alpha order
+# that do not start with "__" in alpha order
 import hidden_4
 
 if __name__ == "__main__":
