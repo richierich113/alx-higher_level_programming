@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# a program that prints all the names defined by the compiled module hidden_4.pyc
+# program that prints all names defined by the compiled module hidden_4.pyc
 #  that do not start with "__" in alpha order
 import hidden_4
 
