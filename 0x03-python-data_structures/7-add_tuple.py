@@ -1,25 +1,17 @@
 #!/usr/bin/python3
 
 def add_tuple(tuple_a=(), tuple_b=()):
-    new_tuple = ()
-    if len(tuple_a) == len(tuple_b) == 2:
-        for i in range(2):
-            num = tuple_a[i] + tuple_b[i]
-            new_tuple = new_tuple + (num,)
-        return new_tuple
-    elif len(tuple_a) == 2 and len(tuple_b) == 1:
-        temp_tuple_b = tuple_b + (0,)
-        for i in range(2):
-            num = tuple_a[i] + temp_tuple_b[i]
-            new_tuple = new_tuple + (num,)
-        return new_tuple
+    result = []
 
-    elif len(tuple_a) == 2 and len(tuple_b) == 0:
-        temp_tuple_b = tuple_b + (0, 0)
-        for i in range(2):
-            num = tuple_a[i] + temp_tuple_b[i]
-            new_tuple = new_tuple + (num,)
-        return new_tuple
+    # Populate list_a and list_b with elements from tuple_a and tuple_b
+    list_a = list(tuple_a) + [0, 0][:max(0, 2 - len(tuple_a))]
+    list_b = list(tuple_b) + [0, 0][:max(0, 2 - len(tuple_b))]
+
+    # Perform element-wise addition
+    for i in range(2):
+        result.append(list_a[i] + list_b[i])
+
+    return tuple(result)
 
 
 # for testing function
