@@ -6,7 +6,7 @@ def no_c(my_string):
         if charac == "c" or charac == "C":
             continue
 
-        new_string = new_string + charac
+        new_string += charac
 
     return new_string
 
