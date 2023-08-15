@@ -22,7 +22,7 @@ int is_palindrome(listint_t **head)
 		two_steps = two_steps->next->next;
 	}
 
-	one_step = reverse(one_step);
+	one_step = reverse_list(one_step);
 	two_steps = *head;
 
 	while (one_step != NULL)
