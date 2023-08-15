@@ -29,7 +29,7 @@ int is_palindrome(listint_t **head)
 	{
 		if (one_step->n != two_steps->n)
 		{
-			return (0); // Not a palindrome
+			return (0);
 		}
 		one_step = one_step->next;
 		two_steps = two_steps->next;
