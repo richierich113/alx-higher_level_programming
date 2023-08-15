@@ -20,5 +20,5 @@ listint_t *reverse(listint_t *head)
 		current = next;
 	}
 
-	return prev;
+	return (prev);
 }
