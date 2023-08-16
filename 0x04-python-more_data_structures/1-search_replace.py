@@ -1,17 +1,15 @@
 #!/usr/bin/python3
 
 def search_replace(my_list, search, replace):
-    if len(my_list) > 0:
-        modified_list = []
-        for i in range(len(my_list)):
-            num = my_list[i]
-            if num == search:
-                modified_list.append(replace)
-            else:
-                modified_list.append(num)
-        return modified_list
+    modified_list = []
 
-    return None
+    for num in my_list:
+        if num == search:
+            modified_list.append(replace)
+        else:
+            modified_list.append(num)
+
+    return modified_list
 
 
 if __name__ == "__main__":
