@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 
 def number_keys(a_dictionary):
-    keys_list = keys(a_dictionary)
-    num_of_keys = len(keys_list)
-    return num_of_keys
+    i = 0
+    for item_dict in a_dictionary:
+        i += 1
+    return i
 
 
 if __name__ == "__main__":
