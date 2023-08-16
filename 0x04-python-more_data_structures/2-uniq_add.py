@@ -2,7 +2,9 @@
 
 def uniq_add(my_list=[]):
     sum = 0
-    for i in set(my_list):
+    # cast my_list to a set
+    set_of_list = set(my_list)
+    for i in set_of_list:
         sum += i
     return sum
 
