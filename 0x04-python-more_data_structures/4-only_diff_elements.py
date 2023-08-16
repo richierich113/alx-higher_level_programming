@@ -7,7 +7,6 @@ def only_diff_elements(set_1, set_2):
     return new_set
 
 
-
 if __name__ == "__main__":
     set_1 = {"Python", "C", "Javascript"}
     set_2 = {"Bash", "C", "Ruby", "Perl"}
