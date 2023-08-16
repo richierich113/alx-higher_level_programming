@@ -4,13 +4,9 @@ def uniq_add(my_list=[]):
     if len(my_list) == 0:
         return 0
 
-    new_list = []
-    first_num = my_list[0]
-    new_list.append(first_num)
+    new_list = [my_list[0]]
     for num in my_list[1:]:
-        if num == new_list[-1]:
-            continue
-        else:
+        if num != new_list[-1]:
             new_list.append(num)
 
     add = sum(new_list)
@@ -20,4 +16,4 @@ def uniq_add(my_list=[]):
 if __name__ == "__main__":
     my_list = [1, 2, 3, 1, 4, 2, 5]
     result = uniq_add(my_list)
-    print("Result: {:d}".format(result))
+    print("Result:", result)
