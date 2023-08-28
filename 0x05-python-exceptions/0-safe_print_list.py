@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 
 def safe_print_list(my_list=[], x=0):
-    for item in range(0, x):
+    items_in_range = 0
+    for indx in range(0, x):
         try:
-            element = my_list[item]
+            element = my_list[indx]
             print(f"{element}", end='')
-        except IndexError as ie:
-            print("IndexError: index {:d} is out of range".format(item))
-        except Exception as e:
-            print(f"Error: {e}")
+            items_in_range += 1
+        except
+            break
     print("")
 
-    return x
+    return items_in_range
 
 
 if __name__ == "__main__":
