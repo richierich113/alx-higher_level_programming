@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+#  Prints the first x elements of a list and only integers.
+# Handles ValueError and TypeError exceptions but not IndexError
+# exception so an x out of range error will show exception in
+# Traceback
 def safe_print_list_integers(my_list=[], x=0):
     print_num = 0
     for indx in range(0, x):
