@@ -13,8 +13,7 @@ def list_division(my_list_1, my_list_2, list_length):
             req_element_2 = isinstance(element_2(int, float))
             '''
 
-            if not isinstance(element_1, (int, float))
-            or not isinstance(element_2, (int, float)):
+            if not isinstance(element_1, (int, float)) or not isinstance(element_2, (int, float)):
                 raise TypeError("wrong type")
             results = element_1 / element_2
         except IndexError:
