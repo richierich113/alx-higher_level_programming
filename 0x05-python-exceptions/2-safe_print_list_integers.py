@@ -2,7 +2,7 @@
 
 def safe_print_list_integers(my_list=[], x=0):
     print_num = 0
-    for indx in range(0,x):
+    for indx in range(0, x):
         try:
             item = my_list[indx]
             print("{:d}".format(item))
@@ -23,4 +23,3 @@ if __name__ == "__main__":
     print("nb_print: {:d}".format(nb_print))
     nb_print = safe_print_list_integers(my_list, len(my_list) + 2)
     print("nb_print: {:d}".format(nb_print))
-        
