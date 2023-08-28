@@ -5,7 +5,7 @@ def list_division(my_list_1, my_list_2, list_length):
     new_list = []
     results = 0
 
-    for indx_1 in range(0, list_length):
+    for indx in range(0, list_length):
         try:
             element_1 = my_list_1[indx]
             element_2 = my_list_2[indx]
