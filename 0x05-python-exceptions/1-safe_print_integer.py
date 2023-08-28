@@ -5,15 +5,6 @@ def safe_print_integer(value):
         int_value = int(value)
         print("{:d}".format(int_value))
         return True
-    except ValueError as ve:
-        print(f"Error: {ve}")
-        return False
-    except TypeError as te:
-        print(f"Error: {te}")
-        return False
-    except OverflowError as oe:
-        print(f"Error: {oe}")
-        return False
     except Exception as e:
         print(f"Error: {e}")
         return False
