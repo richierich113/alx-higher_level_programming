@@ -6,7 +6,7 @@ def safe_print_list(my_list=[], x=0):
             element = my_list[item]
             print(f"{element}", end='')
         except IndexError as ie:
-            print(f"IndexError: index {item} is out of range")
+            print("IndexError: index {:d} is out of range".format(item))
         except Exception as e:
             print(f"Error: {e}")
     print("")
