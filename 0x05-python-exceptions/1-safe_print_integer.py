@@ -4,11 +4,11 @@ def safe_print_integer(value):
     try:
         int_value = int(value)
         print("{:d}".format(int_value))
-        return 0
+        return True
     except ValueError as ve:
-        return 1
+        return False
     except Exception as e:
-        return 1
+        return False
 
 
 if __name__ == "__main__":
