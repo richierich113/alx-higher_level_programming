@@ -7,6 +7,10 @@ def safe_print_integer(value):
         return True
     except ValueError as ve:
         return False
+    except TypeError as te:
+        return False
+    except OverflowError as oe:
+        return False
     except Exception as e:
         return False
 
