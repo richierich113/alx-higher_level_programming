@@ -12,6 +12,7 @@ def safe_print_list(my_list=[], x=0):
             break
         except Exception as e:
             print(f"Error: {e}")
+            break
     print("")
 
     return items_in_range
