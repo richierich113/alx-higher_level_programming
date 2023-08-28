@@ -7,7 +7,7 @@ def safe_print_list(my_list=[], x=0):
             element = my_list[indx]
             print(f"{element}", end='')
             items_in_range += 1
-        except
+        except:
             break
     print("")
 
