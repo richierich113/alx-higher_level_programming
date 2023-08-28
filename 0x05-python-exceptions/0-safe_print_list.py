@@ -8,10 +8,8 @@ def safe_print_list(my_list=[], x=0):
             print(f"{element}", end='')
             items_in_range += 1
         except IndexError as ie:
-            print(f"Error: {ie}")
             break
         except Exception as e:
-            print(f"Error: {e}")
             break
     print("")
 
