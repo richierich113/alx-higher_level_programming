@@ -12,7 +12,6 @@ class Square:
         """
         self.__size = size
 
-
     @property
     def size(self):
         """getter property for size instance attribute
@@ -33,7 +32,6 @@ class Square:
             self.__size = value
         else:
             raise TypeError("size must be an integer")
-
 
     def area(self):
         """function for finding area of square
