@@ -2,6 +2,7 @@
 
 
 class Square:
+    """document for Square"""
 
     def __init__(self, size):
         """init method to initialize instance attributes
