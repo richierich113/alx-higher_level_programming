@@ -58,13 +58,26 @@ class Square:
         """
         return self.__size * self.__size
 
+    def print_position(self):
+        """use position in spaces
+        Returns:
+            tuple: spaces    
+        """
+        positn = ""
+        if self.size == 0:
+            return "\n"
+        for h in range(self.position[1]):
+            positn += "\n"
+        for h in range(self.size):
+            for i in range(self.position[0]):
+                positn += " "
+            for j in range(self.size):
+                positn += "#"
+            positn += "\n"
+        return positn
+
     def my_print(self):
         """function for finding area of square
         """
-        if self.__size == 0:
-            print("")
-        else:
-            for i in range(0, self.__size):
-                for j in range(0, self.__size):
-                    print("#", end='')
-                print("")
+         """print the square in position"""
+        print(self.print_position(), end='')
