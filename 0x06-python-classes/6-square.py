@@ -78,6 +78,6 @@ class Square:
 
     def my_print(self):
         """function for finding area of square
+        print the square in position
         """
-         """print the square in position"""
         print(self.print_position(), end='')
