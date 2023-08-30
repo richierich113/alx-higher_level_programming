@@ -39,7 +39,7 @@ class Square:
         Returns:
             int: tuple of # position"""
         return self.__position
-    
+
     @position.setter
     def position(self, value):
         """setter property for size instance attribute
