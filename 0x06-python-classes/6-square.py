@@ -46,7 +46,7 @@ class Square:
             int: tuple with # position"""
         return self.__position
 
-     @position.setter
+    @position.setter
     def position(self, value):
         """setter property for position instance attribute
         """
