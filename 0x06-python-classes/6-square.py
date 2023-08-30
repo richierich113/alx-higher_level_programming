@@ -63,21 +63,24 @@ class Square:
         """
         return self.__size * self.__size
 
-    def pos_print(self):
-        """returns the position in spaces"""
-        pos = ""
+    def print_position(self):
+        """use position in spaces
+        Returns:
+            tuple: spaces
+        """
+        positn = ""
         if self.size == 0:
             return "\n"
-        for w in range(self.position[1]):
-            pos += "\n"
-        for w in range(self.size):
-            for i in range(self.position[0]):
-                pos += " "
+        for h in range(self.__position[1]):
+            positn += "\n"
+        for h in range(self.size):
+            for i in range(self.__position[0]):
+                positn += " "
             for j in range(self.size):
-                pos += "#"
-            pos += "\n"
-        return pos
+                positn += "#"
+            positn += "\n"
+        return positn
 
     def my_print(self):
-        """print the square in position"""
-        print(self.pos_print(), end='')
+        """function for printing the square in position"""
+        print(self.print_position(), end='')
