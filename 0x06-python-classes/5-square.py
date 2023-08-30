@@ -12,7 +12,6 @@ class Square:
         """
         self.__size = size
 
-
     @property
     def size(self):
         """getter property for size instance attribute
