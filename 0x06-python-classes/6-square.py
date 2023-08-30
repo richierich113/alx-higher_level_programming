@@ -1,32 +1,86 @@
 #!/usr/bin/python3
-"""docstring for Square"""
+"""square docstring"""
 
 
 class Square:
-    """docstring for init"""
-    def __init__(self, size=0):
-        self.size = size
-    """size getter method"""
+    """document for Square"""
+
+    def __init__(self, size=0, position=(0, 0)):
+        """init method to initialize instance attributes
+        Args:
+            size (int): size of square parameter
+            position (tuple): position of # in square
+        """
+        self.__size = size
+        self.__position = position
+
+    def __str__(self):
+        self.my_print()
+
     @property
     def size(self):
+        """getter property for size instance attribute
+        Returns:
+            int: size of square
+        """
         return self.__size
-    """size setter method"""
+
     @size.setter
     def size(self, value):
-        if isinstance(value, int) and value >= 0:
+        """setter property for size instance attribute
+        """
+        if isinstance(value, int):
+            if value < 0:
+                raise ValueError("size must be >= 0")
             self.__size = value
-        elif not isinstance(value, int):
+        else:
             raise TypeError("size must be an integer")
-        elif value < 0:
-            raise ValueError("size must be >= 0")
-    """calculate the area of square"""
+
+    @property
+    def position(self):
+        """getter property for size instance attribute, position
+        Returns:
+            int: tuple of # position"""
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        """setter property for size instance attribute
+        """
+        if isinstance(value, tuple) and len(value) == 2:
+            if isinstance(value[0], int) and isinstance(value[1], int):
+                if value[0] >= 0 and value[1] >= 0:
+                    self.__position = value
+        else:
+            raise TypeError("position must be a tuple of 2 positive integers")
+
     def area(self):
-        return (self.size ** 2)
-    """print hashtag of squares by the size given"""
-    def my_print(self):
-        # print(self.size)
+        """function for finding area of square
+            Returns:
+                int: area of square
+        """
+        return self.__size * self.__size
+
+    def print_position(self):
+        """use position in spaces
+        Returns:
+            tuple: spaces
+        """
+        positn = ""
         if self.size == 0:
-            print("")
-        elif self.size > 0:
-            for i in range(self.size):
-                print("#" * self.size)
+            return "\n"
+        for h in range(self.position[1]):
+            positn += "\n"
+        for h in range(self.size):
+            for i in range(self.position[0]):
+                positn += " "
+            for j in range(self.size):
+                positn += "#"
+            positn += "\n"
+        return positn
+
+    def my_print(self):
+        """function for finding area of square
+        print the square in position
+        """
+        print(self.print_position(), end='')
