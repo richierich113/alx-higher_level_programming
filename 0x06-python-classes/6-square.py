@@ -61,7 +61,7 @@ class Square:
     def print_position(self):
         """use position in spaces
         Returns:
-            tuple: spaces    
+            tuple: spaces
         """
         positn = ""
         if self.size == 0:
