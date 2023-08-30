@@ -66,10 +66,10 @@ class Square:
         positn = ""
         if self.size == 0:
             return "\n"
-        for h in range(self.position[1]):
+        for h in range(self.__position[1]):
             positn += "\n"
         for h in range(self.size):
-            for i in range(self.position[0]):
+            for i in range(self.__position[0]):
                 positn += " "
             for j in range(self.size):
                 positn += "#"
