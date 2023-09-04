@@ -1,10 +1,10 @@
 #!/usr/bin/python3
- """module for Rectangle class  
- """
+"""module for Rectangle class  
+"""
 
 
 class Rectangle:
-    """empty Rectangle method   
+    """empty Rectangle method
     """
     pass
 
