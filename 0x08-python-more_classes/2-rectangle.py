@@ -62,10 +62,18 @@ class Rectangle:
             raise TypeError("height must be an integer")
 
     def area(self):
+        """returns area of Rectangle
+        Returns:
+            int: area of Rectangle
+        """
         area_val = (self.__height) * (self.__width)
         return area_val
 
     def perimeter(self):
+        """returns perimeter of Rectangle
+        Returns:
+            int: perimeter of Rectangle
+        """
         if Rectangle.height == 0 or Rectangle.width == 0:
             perim_val = 0
         else:
@@ -76,10 +84,12 @@ class Rectangle:
 
 if __name__ == "__main__":
     my_rectangle = Rectangle(2, 4)
-    print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+    print("Area: {} - Perimeter: {}".format(my_rectangle.area(),\
+        my_rectangle.perimeter()))
 
     print("--")
 
     my_rectangle.width = 10
     my_rectangle.height = 3
-    print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+    print("Area: {} - Perimeter: {}".format(my_rectangle.area(),\
+        my_rectangle.perimeter()))
