@@ -58,7 +58,6 @@ class Rectangle:
             self.__height = value
         else:
             raise TypeError("height must be an integer")
-        
 
 
 if __name__ == "__main__":
