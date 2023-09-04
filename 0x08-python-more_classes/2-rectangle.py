@@ -74,7 +74,7 @@ class Rectangle:
         Returns:
             int: perimeter of Rectangle
         """
-        if Rectangle.height == 0 or Rectangle.width == 0:
+        if self.__height == 0 or self.__width == 0:
             perim_val = 0
         else:
             perim_val = (2 * self.__height) + (2 * self.__width)
@@ -84,10 +84,12 @@ class Rectangle:
 
 if __name__ == "__main__":
     my_rectangle = Rectangle(2, 4)
-    print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+    print("Area: {}".format(my_rectangle.area()))
+    print("Perimeter: {}".format(my_rectangle.perimeter()))
 
     print("--")
 
     my_rectangle.width = 10
     my_rectangle.height = 3
-    print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+    print("Area: {}".format(my_rectangle.area()))
+    print("Perimeter: {}".format(my_rectangle.perimeter()))
