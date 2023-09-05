@@ -31,6 +31,7 @@ class Solution_Board:
             raise TypeError("num should be an int")
         self.__num = value
 
+
 def get_n_queens(chess_board, column, num):
     if column >= num:
         Solution_Board.solutions.append(chess_board[:])
@@ -40,6 +41,7 @@ def get_n_queens(chess_board, column, num):
             chess_board[i][column] = 1
             get_n_queens(chess_board, column + 1, num)
             chess_board[i][column] = 0
+
 
 def board_safe(chess_board, row, column, num):
     for i in range(column):
