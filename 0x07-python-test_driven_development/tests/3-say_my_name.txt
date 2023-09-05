@@ -1,0 +1,113 @@
+=======================================
+Functional Testing for 3-say_my_name.py
+=======================================
+
+"""This module contains a function ``say_my_name`` that prints
+``first name`` ``last name`` as strings
+
+Importing the function from the ``3-say_my_name`` module
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Cases
+=====
+
+Valid cases
+============
+
+Passing strings for both ``first_name`` and ``last_name``
+
+::
+    
+    >>> say_my_name("John", "Smith")
+    "My name is John Smith
+
+Passing two strings for``first_name`` and single string for
+``last_name``
+
+::
+
+    >>> say_my_name("Richard Boakye", "Duah")
+    My name is Richard Boakye Duah
+
+Passing only one argument string as ``last_name`` is intially
+set to ""
+
+::
+
+    >>>> say_my_name("Richie")
+    Richie
+
+Invalid cases
+============
+
+Test by passing no arguments
+
+::
+    >>> say_my_name()
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name should at least be provided
+
+Test by passing None as argument
+
+::
+    >>> say_my_name()
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+Passing first_name as an int
+
+::
+
+    >>> say_my_name(6, "Rich")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+Passing last_name as an int
+
+::
+
+    >>> say_my_name("Rich", 6)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+passing a string and a list
+
+::
+
+    >>> say_my_name("MeCalister", ["dog", "cat", "chicken"])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string not a list
+
+Passing a dictionary and a float
+
+::
+
+    >>> say_my_name({"Height": 6, "Length": 23}, 7.7)
+    Traceback (most recent call last):
+    TypeError: first_name and last_name must be strings
+
+passing more than two arguments but are strings
+
+::
+
+    >>> say_my_name("dog", "cat", "chicken")
+    Traceback (most recent call last):
+    ValueError: arguments should be only two
+
+
+
+
+
+
+
+
+
+
+
+
+
