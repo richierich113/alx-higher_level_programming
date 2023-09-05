@@ -82,11 +82,14 @@ class Rectangle:
         return perim_val
 
     def __str__(self):
+        """__str__ method for object when str()
+            or print() is called
+        """
         string = ''
         if self.width == 0 or self.height == 0:
             return str()
-        for i in range(0, self.__height):
-            for j in range(0, self.__width):
+        for i in range(0, self.height):
+            for j in range(0, self.width):
                 string += "#"
             string += "\n"
         return string
