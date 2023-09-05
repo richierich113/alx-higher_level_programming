@@ -94,7 +94,7 @@ class Rectangle:
             if i != self.height - 1:
                 string += "\n"
         return string
-    
+
     def __repr__(self):
         """__repr__ method for class object when repr()
             is called, or eval().
