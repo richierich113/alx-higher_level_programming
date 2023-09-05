@@ -110,7 +110,8 @@ class Rectangle:
 if __name__ == "__main__":
     Rectangle = __import__('5-rectangle').Rectangle
     my_rectangle = Rectangle(2, 4)
-    print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+    print("Area: {}".format(my_rectangle.area()))
+    print("Perimeter: {}".format(my_rectangle.perimeter()))
 
     del my_rectangle
     try:
