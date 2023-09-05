@@ -37,7 +37,7 @@ set to ""
 
 ::
 
-    >>>> say_my_name("Richie")
+    >>> say_my_name("Richie")
     Richie
 
 Invalid cases
