@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Module with function which prints My name is 
+"""Module with function which prints My name is
 <first name> <last name>
 """
 
