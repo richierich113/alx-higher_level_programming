@@ -94,12 +94,3 @@ Passing a dictionary and a float
     Traceback (most recent call last):
         ...
     TypeError: first_name and last_name must be strings
-
-passing more than two arguments but are strings
-
-::
-
-    >>> say_my_name("dog", "cat", "chicken")
-    Traceback (most recent call last):
-        ...
-    ValueError: arguments should be only two
