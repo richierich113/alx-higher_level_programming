@@ -85,6 +85,7 @@ class Rectangle:
 
         return perim_val
 
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """ returns the biggest rectangle based on area
         """
