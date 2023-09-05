@@ -91,7 +91,8 @@ class Rectangle:
         for i in range(0, self.height):
             for j in range(0, self.width):
                 string += "#"
-            string += "\n"
+            if i != self.height - 1:
+                string += "\n"
         return string
 
 
