@@ -7,6 +7,7 @@ class Rectangle:
     """empty Rectangle method
     """
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """constructor for Rectangle class instantiation
         Args:
@@ -111,13 +112,10 @@ class Rectangle:
 
 
 if __name__ == "__main__":
-    Rectangle = __import__('5-rectangle').Rectangle
-    my_rectangle = Rectangle(2, 4)
-    print("Area: {}".format(my_rectangle.area()))
-    print("Perimeter: {}".format(my_rectangle.perimeter()))
-
-    del my_rectangle
-    try:
-        print(my_rectangle)
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
+    my_rectangle_1 = Rectangle(2, 4)
+    my_rectangle_2 = Rectangle(2, 4)
+    print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+    del my_rectangle_1
+    print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+    del my_rectangle_2
+    print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
