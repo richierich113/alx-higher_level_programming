@@ -19,21 +19,21 @@ Passing strings for both ``first_name`` and ``last_name``
 
 ::
 
-    >>> say_my_name("Beta", "Scribbles")
-    My name is Beta Scribbles
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
 
 ::
 
-    >>> say_my_name("Tom Jerry", "Avril")
-    My name is Tom Jerry Avril
+    >>> say_my_name("Richard Boakye", "Duah")
+    My name is Richard Boakye Duah
 
 The parameter ```last_name``` is optional. If no last name is provided,
 an empty string is printed instead.
 
 ::
 
-    >>> say_my_name("Beta")
-    My name is Beta 
+    >>> say_my_name("Richie")
+    My name is Richie 
 
 Invalid cases
 =============
@@ -43,19 +43,19 @@ a TypeError is raised.
 
 ::
 
-    >>> say_my_name(6, "James")
+    >>> say_my_name(6, "Rich")
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
 ::
 
-    >>> say_my_name("MeCalister", ["Cavs", "Bakers", "Heat"])
+    >>> say_my_name("Animals", ["dog", "cat", "chicken"])
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
 ::
 
-    >>> say_my_name({"LeBron": 6, "Lames": 23}, 7.7)
+    >>> say_my_name({"Height": 6, "Length": 23}, 7.7)
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
