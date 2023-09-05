@@ -22,7 +22,7 @@ Passing strings for both ``first_name`` and ``last_name``
 ::
     
     >>> say_my_name("John", "Smith")
-    "My name is John Smith
+    My name is John Smith
 
 Passing two strings for``first_name`` and single string for
 ``last_name``
@@ -33,12 +33,12 @@ Passing two strings for``first_name`` and single string for
     My name is Richard Boakye Duah
 
 Passing only one argument string as ``last_name`` is intially
-set to ""
+set to empty string
 
 ::
 
     >>> say_my_name("Richie")
-    Richie
+    My name is Richie
 
 Invalid cases
 ============
@@ -65,6 +65,7 @@ Passing first_name as an int
 
     >>> say_my_name(6, "Rich")
     Traceback (most recent call last):
+        ...
     TypeError: first_name must be a string
 
 Passing last_name as an int
@@ -73,6 +74,7 @@ Passing last_name as an int
 
     >>> say_my_name("Rich", 6)
     Traceback (most recent call last):
+        ...
     TypeError: last_name must be a string
 
 passing a string and a list
@@ -81,6 +83,7 @@ passing a string and a list
 
     >>> say_my_name("MeCalister", ["dog", "cat", "chicken"])
     Traceback (most recent call last):
+        ...
     TypeError: last_name must be a string not a list
 
 Passing a dictionary and a float
@@ -89,6 +92,7 @@ Passing a dictionary and a float
 
     >>> say_my_name({"Height": 6, "Length": 23}, 7.7)
     Traceback (most recent call last):
+        ...
     TypeError: first_name and last_name must be strings
 
 passing more than two arguments but are strings
@@ -97,4 +101,5 @@ passing more than two arguments but are strings
 
     >>> say_my_name("dog", "cat", "chicken")
     Traceback (most recent call last):
+        ...
     ValueError: arguments should be only two
