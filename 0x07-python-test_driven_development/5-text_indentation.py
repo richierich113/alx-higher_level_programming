@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module contains a function text_indentation(text) 
+This module contains a function text_indentation(text)
 """
 
 
@@ -35,6 +35,6 @@ if __name__ == "__main__":
                      quae est moderatio cupiditatum rationi oboediens. \
                      Si id dicis, vicimus. Inde sermone vario sex illa a \
                      Dipylo stadia confecimus. Sin aliud quid voles, postea. \
-                     Quae animi affectio suum cuique tribuens atque hanc, quam \
-                     dico. Utinam quidem dicerent alium alio beatiorem! Iam \
-                     ruinas videres""")
+                     Quae animi affectio suum cuique tribuens atque hanc, \
+                     quam dico. Utinam quidem dicerent alium alio beatiorem! \
+                     Iam ruinas videres""")
