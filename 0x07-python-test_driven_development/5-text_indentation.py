@@ -7,7 +7,7 @@ This module contains a function text_indentation(text)
 def text_indentation(text):
     '''prints a text with 2 new lines after each ".", "?", or ":"
     Args:
-        text (str): The string to be printed
+        text (str): string parameter
     Raises:
         TypeError: If text is not a string
     '''
