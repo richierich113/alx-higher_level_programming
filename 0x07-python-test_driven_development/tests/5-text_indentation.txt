@@ -1,23 +1,24 @@
-================================
-How to Use 5-text_indentation.py
-================================
+============================================
+Functional Testing for 5-text_indentation.py
+============================================
 
-This module defines a text-indentation function ``text_indentation(text)``.
+This module contains a function ``text_indentation(text)`` function that prints
+a text with 2 new lines after each of these characters: `.`, `?` and `:`
 
-Usage
-=====
-
-Text is printed with two new lines after each of the characters ``.``, ``?``,
-and ``:``.
+Importing the function ``text_indentation(text)`` from module
 
 ::
-
     >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Valid cases
+=========
+
+Passing "Hello?"
     >>> text_indentation("Hello?")
     Hello?
     <BLANKLINE>
 
-No spaces are printed at the beginning of a line.
+Passing string with spaces at the beginning of a line.
 
 ::
 
@@ -25,17 +26,21 @@ No spaces are printed at the beginning of a line.
     Hi there.
     <BLANKLINE>
 
+Passing spaces
+
 ::
 
     >>> text_indentation("          ")
 
-Similarly, no spaces are printed at the end of each printed line.
+Passing string with spaces at the end of a line.
 
 ::
 
     >>> text_indentation("Hello.   ")
     Hello.
     <BLANKLINE>
+
+Passing string with spaces within line.
 
 ::
 
@@ -45,15 +50,14 @@ Similarly, no spaces are printed at the end of each printed line.
     This is messy.
     <BLANKLINE>
 
-New lines are only printed for the characters ``.``, ``?``, and ``:`` -
-text not ending with one of these characters is not ended with a new line.
+Passing string without the characters as end of lines ``.``, ``?``, and ``:``
 
 ::
 
     >>> text_indentation("No ending period, what bad grammar")
     No ending period, what bad grammar
 
-New lines within a string are printed as normal.
+Passing strings with New lines
 
 ::
 
@@ -125,7 +129,7 @@ A combo example:
 Invalid Text
 ============
 
-The paramter ``text`` must be a string. Otherwise, a TypeError is raised.
+Passing an integer
 
 ::
 
@@ -133,11 +137,15 @@ The paramter ``text`` must be a string. Otherwise, a TypeError is raised.
     Traceback (most recent call last):
     TypeError: text must be a string
 
+Passing a dict
+
 ::
 
     >>> text_indentation({"one": 1, "two": 2})
     Traceback (most recent call last):
     TypeError: text must be a string
+
+Passing None as argument
 
 ::
 
