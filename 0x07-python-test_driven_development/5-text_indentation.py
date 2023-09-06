@@ -14,20 +14,20 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    count = 0
-    while count < len(text) and text[count] == " ":
-        count = count + 1
+    i = 0
+    while i < len(text) and text[i] == " ":
+        i += 1
 
-    while count < len(text):
-        print(text[count], end="")
-        if text[count] == "\n" or text[count] in ".?:":
-            if text[count] in ".?:":
-                print("\n")
-            count = count + 1
-            while count < len(text) and text[count] == " ":
-                count = count + 1
+    while i < len(text):
+        print(text[i], end="")
+        if text[i] == "\n" or text[i] in ".?:":
+            if text[i] in ".?:":
+                print("\n", end='\n')
+             i += 1
+            while i < len(text) and text[i] == " ":
+                 i += 1
             continue
-        count = count + 1
+         i += 1
 
 
 if __name__ == "__main__":
