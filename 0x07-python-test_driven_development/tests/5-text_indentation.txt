@@ -1,19 +1,37 @@
-============================================
-Functional Testing for 5-text_indentation.py
-============================================
+===============================
+ How to Use 5-text_indentation.py
+===============================
 
-This module contains a function ``text_indentation(text)`` function that prints
-a text with 2 new lines after each of these characters: `.`, `?` and `:`
+The ``text_indentation(text)`` function that prints a text with 2 new lines after each of these characters: `.`, `?` and `:`
 
-Importing the function ``text_indentation(text)`` from module
+Importing the Module
 
 ::
     >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-Valid cases
-=========
+Test by passing no arguments
 
-passing an argument (empty string)
+::
+    >>> text_indentation()
+    Traceback (most recent call last):
+      ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Test by passing an argument (not string)
+
+::
+    >>> text_indentation(5.11)
+    Traceback (most recent call last):
+      ...
+    TypeError: text must be a string
+
+::
+    >>> text_indentation([5])
+    Traceback (most recent call last):
+      ...
+    TypeError: text must be a string
+
+Test by passing an argument (empty string)
 
 ::
 
@@ -69,7 +87,7 @@ Test for non-matching characters
     Hello
 
 
-Passing argument with spaces at the beginning of a line.
+Test for removed space at beginning and end of line
 
 ::
 
@@ -78,23 +96,26 @@ Passing argument with spaces at the beginning of a line.
     <BLANKLINE>
     <BLANKLINE>
 
-Passing two strings separated by a space
+New Tests
+=========
+
+Test for two strings separated by a space
 
 ::
 
-    >>> text_indentation( "Hi There")
-    Hi There
+    >>> text_indentation( "Holberton School")
+    Holberton School
 
- Passing two strings joined by a dot "."
+Test for two strings joined by a one of the '.'
 
 ::
 
-    >>> text_indentation( "Hi.There")
-    Hi
+    >>> text_indentation( "Holberton.School")
+    Holberton
     <BLANKLINE>
-    There
+    School
 
-Passing an argument with space at beginning and end of line
+Test for removed space at beginning and end of line
 
 ::
 
@@ -102,30 +123,3 @@ Passing an argument with space at beginning and end of line
     Lorem ipsum dolor sit amet, consectetur adipiscing elit
     <BLANKLINE>
     <BLANKLINE>
-
-invalid cases
-===========
-
-passing no argument
-
-::
-    >>> text_indentation()
-    Traceback (most recent call last):
-      ...
-    TypeError: text_indentation() missing 1 required positional argument: 'text'
-
-Passing a float argument
-
-::
-    >>> text_indentation(2.2)
-    Traceback (most recent call last):
-      ...
-    TypeError: text must be a string
-
-Passing a list argument
-
-::
-    >>> text_indentation([5])
-    Traceback (most recent call last):
-      ...
-    TypeError: text must be a string
