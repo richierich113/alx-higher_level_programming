@@ -4,8 +4,7 @@
 
 
 class MyList(list):
-     """A class that prints a list"""
-
+    """A class that inherits from list"""
     def print_sorted(self):
-        sorted_list = tuple(self)
-        print(sorted_list)
+        """prints a sorted list"""
+        print(sorted(self))
