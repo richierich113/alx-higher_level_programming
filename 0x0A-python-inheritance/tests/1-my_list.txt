@@ -33,7 +33,7 @@ passing an undefined object
 >>> my_list2.print_sorted()
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-NameError: name 'my_list2' is not defined
+NameError: name 'Hi' is not defined
 >>>
 
 -------------------------------------------
@@ -41,7 +41,7 @@ NameError: name 'my_list2' is not defined
 passing a list
 
 >>> lst = [7, 2, 9]
->>> my_list = MyList(a)
+>>> my_list = MyList(lst)
 >>> my_list.print_sorted()
 [2, 7, 9]
 >>>
@@ -51,7 +51,7 @@ passing a list
 passing an empty list
 
 >>> lst = []
->>> my_list = MyList(a)
+>>> my_list = MyList(lst)
 >>> my_list.print_sorted()
 []
 >>>
