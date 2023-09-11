@@ -1,12 +1,15 @@
+====================
 Testing 1-my_list.py
--------------------------------------------
+====================
 
-import MyList class
+importing MyList class
+
 >>> MyList = __import__('1-my_list').MyList
 >>>
+
 -------------------------------------------
 
-case 1: common case
+Passing common case
 
 >>> my_list = MyList()
 >>> my_list.append(1)
@@ -79,7 +82,9 @@ passing same number
 >>>
 
 -------------------------------------------
+
 passing parent object
+
 >>> my_list = [1, 2, 3]
 >>> my_list.print_sorted()
 Traceback (most recent call last):
