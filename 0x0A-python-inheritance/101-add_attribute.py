@@ -7,10 +7,10 @@ def add_attribute(obj, att, value):
     Raises
         TypeError: if you can't add a new attribute
     """
-    if not hasattr(obj, "__dict__"):
-        raise TypeError("can't add new attribute")
+    if '__dict__' in mc.__dir__():
+        mc.__dict__[name] = value
     else:
-        setattr(obj, att, value)
+        raise TypeError("can't add new attribute")
 
 
 if __name__ == "__main__":
