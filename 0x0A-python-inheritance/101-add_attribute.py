@@ -2,7 +2,7 @@
 """module with a function that adds attributes to objects"""
 
 
-def add_attribute(obj, att, value):
+def add_attribute(obj, name, value):
     """Add a new attribute to an object if possible
     Raises
         TypeError: if you can't add a new attribute
