@@ -15,7 +15,7 @@ def add_attribute(obj, att, value):
 
 if __name__ == "__main__":
     class MyClass():
-    pass
+        pass
 
     mc = MyClass()
     add_attribute(mc, "name", "John")
