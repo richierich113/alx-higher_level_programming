@@ -7,10 +7,13 @@ def add_attribute(obj, att, value):
     Raises
         TypeError: if you can't add a new attribute
     """
-    if '__dict__' in mc.__dir__():
-        mc.__dict__[name] = value
-    else:
-        raise TypeError("can't add new attribute")
+    builtins = (str, int, complex, bool, float, list,
+                tuple, dict, set, frozenset, type, object)
+    for _type in builtins:
+        if type(obj) is _type:
+            raise TypeError("can't add new attribute")
+
+    object.__setattr__(obj, name, value)
 
 
 if __name__ == "__main__":
