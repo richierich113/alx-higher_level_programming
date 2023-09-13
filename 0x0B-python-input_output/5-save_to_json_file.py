@@ -11,6 +11,7 @@ def save_to_json_file(my_obj, filename):
     with open(filename, 'w', encoding='utf-8') as myFile:
         return myFile.write(json.dumps(my_obj))
 
+
 if __name__ == "__main__":
     filename = "my_list.json"
     my_list = [1, 2, 3]
