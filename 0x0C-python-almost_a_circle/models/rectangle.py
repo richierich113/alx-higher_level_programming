@@ -49,11 +49,11 @@ class Rectangle(Base):
     def to_dictionary(self):
         """returns dictionary representation of current rectangle
         """
-       the_dictionary = {'id': self.id,
-                         'width': self.width,
-                         'height': self.height,
-                         'x': self.x,
-                         'y': self.y}
+        the_dictionary = {'id': self.id,
+                          'width': self.width,
+                          'height': self.height,
+                          'x': self.x,
+                          'y': self.y}
         return the_dictionary
 
     def update(self, *args, **kwargs):
