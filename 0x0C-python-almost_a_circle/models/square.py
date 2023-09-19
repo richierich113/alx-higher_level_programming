@@ -21,8 +21,7 @@ class Square(Rectangle):
         return f"[Square] ({self.id}) {self.x}/{ self.y} - {self.size}"
 
     def update(self, *args, **kwargs):
-        """takes an *args argument and sets arguments respective
-            to instantiation function
+        """Updates attributes of an instance
         """
         if args is not None and len(args) > 0:
             for i, arg in enumerate(args):
@@ -46,7 +45,7 @@ class Square(Rectangle):
                     self.y = value
 
     def to_dictionary(self):
-        """gets the dictionary representation of a square object
+        """returns the dictionary representation of a Square
         """
         new_d = super().to_dictionary()
         del new_d['height']
