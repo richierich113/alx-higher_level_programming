@@ -15,7 +15,7 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """overrides __str__ method and return 
+        """overrides __str__ method and return
         [Square] (<id>) <x>/<y> - <size>
         """
         return f"[Square] ({self.id}) {self.x}/{ self.y} - {self.size}"
