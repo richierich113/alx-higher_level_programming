@@ -40,9 +40,9 @@ class Base:
             if list_objs is None:
                 myFile.write("[]")
             else:
-                dictionary_lsts = [objts.to_dictionary() for objts in list_objs]
+                diction_lsts = [objts.to_dictionary() for objts in list_objs]
 
-                myFile.write(Base.to_json_string(dictionary_lsts))
+                myFile.write(Base.to_json_string(diction_lsts))
 
     @staticmethod
     def from_json_string(json_string):
@@ -56,7 +56,7 @@ class Base:
 
             list_of_json_strings = json.loads(json_string)
             return list_of_json_strings
-    
+
     @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all attributes already set
@@ -70,7 +70,7 @@ class Base:
         dummy_instance.update(**dictionary)
         return dummy_instance
 
-     @classmethod
+    @classmethod
     def load_from_file(cls):
         """returns a list of all instances in class's file
         """
