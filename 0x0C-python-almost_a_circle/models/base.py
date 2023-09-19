@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 """base module for all other classes in this project
 """
+import csv
+import json
+import os
+import turtle
 
 
 class Base:
