@@ -47,6 +47,15 @@ class Rectangle(Base):
                                                    self.height)
         return overrider
 
+    def to_dictionary(self):
+        """returns dictionary representation of current rectangle
+        """
+        return {'id': self.id,
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y}
+
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute
         """
