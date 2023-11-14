@@ -21,7 +21,7 @@ if (argv.length < 4) {
   const arg2 = parseInt(argv[3]);
 
   if (!isNaN(arg1) && !isNaN(arg2)) {
-    function add(a, b) {
+    function add (a, b) {
       console.log(a + b);
     }
 
