@@ -12,21 +12,14 @@ You are not allowed to use var
 
 const argv = process.argv;
 
-// Check if there are at least 3 arguments
-if (argv.length < 4) {
-  console.log('provide two valid numbers');
-} else {
-  // Parse the second and third arguments as integers
-  const arg1 = parseInt(argv[2]);
-  const arg2 = parseInt(argv[3]);
+// Parse the second and third arguments as integers
+const arg1 = parseInt(argv[2]);
+const arg2 = parseInt(argv[3]);
 
-  if (!isNaN(arg1) && !isNaN(arg2)) {
-    function add (a, b) {
-      console.log(a + b);
-    }
-
-    add(arg1, arg2);
-  } else {
-    console.log('provide two valid numbers');
+if (!isNaN(arg1) && !isNaN(arg2)) {
+  function add (a, b) {
+    console.log(a + b);
   }
+
+  add(arg1, arg2);
 }
