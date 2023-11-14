@@ -17,7 +17,7 @@ if (argv.length < 3) {
   const arg1 = argv[2];
   const size = parseInt(arg1);
   if (!isNaN(size)) {
-    let row = 'X'.repeat(size);
+    const row = 'X'.repeat(size);
     for (let j = 0; j < size; j++) {
       console.log(row);
     }
