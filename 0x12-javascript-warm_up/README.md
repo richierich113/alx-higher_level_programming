@@ -1,4 +1,4 @@
-#0x12-javascript-warm_up
+# 0x12-javascript-warm_up
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
 General
