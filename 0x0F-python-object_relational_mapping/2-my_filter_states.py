@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 
 '''
-Write a script that takes in an argument and displays all values in
+a script that takes in an argument and displays all values in
 the `states` table of `hbtn_0e_0_usa` where `name` matches the argument.
 
-    -Your script should take 4 arguments: `mysql username`, `mysql password`,
+    - script  take 4 arguments: `mysql username`, `mysql password`,
     `database name` and `state name searched` (no argument validation needed)
-    -You must use the module `MySQLdb (import MySQLdb)`
-    -Your script should connect to a MySQL server running on `localhost`
+    - use the module `MySQLdb (import MySQLdb)`
+    - connect to a MySQL server running on `localhost`
     at port `3306`
-    -You must use `format` to create the SQL query with the user input
-    -Results must be sorted in ascending order by `states.id`
-    -Your code should not be executed when imported
+    - use `format` to create the SQL query with the user input
+    -Results sorted in ascending order by `states.id`
+    - script not executed when imported
 '''
 
 
@@ -19,9 +19,9 @@ from sys import argv
 import MySQLdb
 
 
-def list_states_matching(user, passwd, db, state_name):
+def states_matching_the_searched_name(user, passwd, db, searched_name):
     '''List all states ordered by id in
-    ascending order that match "state_name"'''
+    ascending order that match "searched_name"'''
     db = MySQLdb.connect(
         host="localhost",
         user=user,
@@ -30,10 +30,10 @@ def list_states_matching(user, passwd, db, state_name):
         port=3306)
     cursor = db.cursor()
     cursor.execute('SELECT * FROM states ORDER BY states.id ASC;')
-    for result in cursor.fetchall():
-        if result[1].startswith(state_name):
-            print(result)
+    for list_result in cursor.fetchall():
+        if list_result[1].startswith(searched_name):
+            print(list_result)
 
 
 if __name__ == '__main__':
-    list_states_matching(argv[1], argv[2], argv[3], argv[4])
+    states_matching_the_searched_name(argv[1], argv[2], argv[3], argv[4])
