@@ -23,13 +23,13 @@ from sys import argv
 import MySQLdb
 
 
-def injection_safe_search_matching(username, passwd, database, searched_name):
+def injection_safe_search_matching(username, passwd, db, searched_name):
     '''List all states matching "state_name"'''
     db = MySQLdb.connect(
         host="localhost",
         user=username,
         passwd=passwd,
-        db=database,
+        db=db,
         port=3306)
     cursor = db.cursor()
     query = 'SELECT * FROM states WHERE name = %s ORDER BY states.id ASC;'
