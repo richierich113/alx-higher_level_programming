@@ -19,21 +19,21 @@ from sys import argv
 import MySQLdb
 
 
-def states_matching_the_searched_name(username, passwd, database, searched_name):
+def list_states_matching(user, passwd, db, state_name):
     '''List all states ordered by id in
-    ascending order that match the searched_name'''
+    ascending order that match "state_name"'''
     db = MySQLdb.connect(
         host="localhost",
-        user=username,
+        user=user,
         passwd=passwd,
-        db=database,
+        db=db,
         port=3306)
     cursor = db.cursor()
     cursor.execute('SELECT * FROM states ORDER BY states.id ASC;')
-    for list_result in cursor.fetchall():
-        if list_result[1].startswith(searched_name):
-            print(list_result)
+    for result in cursor.fetchall():
+        if result[1].startswith(state_name):
+            print(result)
 
 
 if __name__ == '__main__':
-    states_matching_the_searched_name(argv[1], argv[2], argv[3], argv[4])
+    list_states_matching(argv[1], argv[2], argv[3], argv[4])
