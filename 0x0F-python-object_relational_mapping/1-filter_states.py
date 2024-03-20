@@ -18,14 +18,14 @@ from sys import argv
 import MySQLdb
 
 
-def states_starting_with_N(username, passwd, database):
+def list_states_starting_with_N(username, passwd, db):
     '''List all states ordered by id in
     ascending order that start with "N"'''
     db = MySQLdb.connect(
         host="localhost",
         user=username,
         passwd=passwd,
-        db=database,
+        db=db,
         port=3306)
     cursor = db.cursor()
     cursor.execute('SELECT * FROM states ORDER BY states.id ASC;')
@@ -35,41 +35,4 @@ def states_starting_with_N(username, passwd, database):
 
 
 if __name__ == '__main__':
-    states_starting_with_N(argv[1], argv[2], argv[3])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    list_states_starting_with_N(argv[1], argv[2], argv[3])
