@@ -29,16 +29,14 @@ def cities_in_searched_state(username, passwd, database, state_name):
         db=database,
         port=3306)
     cursor = db.cursor()
-    query = '''
-        SELECT cities.name 
-        FROM cities
-        INNER JOIN states ON cities.states_id=states.id 
-        WHERE states.name = %s
-        ORDER BY cities.id ASC;
-    '''
-    cursor.execute(query, (state_name,))
-    for searched_results in cursor.fetchall():
-        print(searched_results[0])
+    cursor.execute('''SELECT cities.name, states.name FROM cities\
+    INNER JOIN states ON cities.state_id=states.id ORDER BY cities.id ASC;''')
+    state_cities = []
+    for search_result in cursor.fetchall():
+        if search_result[1] == state_name:
+            state_cities.append(search_result[0])
+    print(', '.join(state_cities))
+
 
 if __name__ == '__main__':
     cities_in_searched_state(argv[1], argv[2], argv[3], argv[4])
