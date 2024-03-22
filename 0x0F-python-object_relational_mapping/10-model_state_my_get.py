@@ -27,7 +27,8 @@ from model_state import Base, State
 if __name__ == '__main__':
     # Check if correct number of arguments are provided
     if len(argv) != 5:
-        print("Usage: {} <username> <password> <database> <state_name>".format(argv[0]))
+        print("Usage: {} <username> <password> <database> \
+        <state_name>".format(argv[0]))
         exit(1)
 
     # Extract arguments
