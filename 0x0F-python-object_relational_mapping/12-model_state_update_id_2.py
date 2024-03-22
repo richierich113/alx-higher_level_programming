@@ -49,7 +49,7 @@ if __name__ == '__main__':
     if state_to_change:
         # Update the name of the state
         state_to_change.name = "New Mexico"
-        
+
         # Commit the session to save changes to the database
         session.commit()
     else:
