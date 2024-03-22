@@ -16,27 +16,38 @@ database `hbtn_0e_6_usa`
 '''
 
 
-import sys
+from sys import argv
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
+from sqlalchemy.orm import sessionmaker
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     # Check if correct number of arguments are provided
-    if len(sys.argv) != 4:
-        print("Usage: {} username password database".format(sys.argv[0]))
-        sys.exit(1)
-
-    # Retrieve MySQL connection details from command-line arguments
-    username, password, database = sys.argv[1:]
+    if len(argv) != 4:
+        print("Usage: {} <username> <password> <database>".format(argv[0]))
+        exit(1)
 
     # Create engine to connect to MySQL server
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
-                           format(username, password, database))
-
-    # Create session class bound to the engine
-    Session = sessionmaker(bind=engine)
+    try:
+        engine = create_engine(
+            f'mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}')
+        # Create all tables in the database
+        Base.metadata.create_all(engine)
+    except Exception as e:
+        print("An error occurred:", e)
+        exit(1)
 
     # Create a session
+    Session = sessionmaker(bind=engine)
     session = Session()
+
+    try:
+        # Query all State objects and print them sorted by id
+        for instance in session.query(State).order_by(State.id):
+            print(f"{instance.id}: {instance.name}")
+    except Exception as e:
+        print("An error occurred:", e)
+    finally:
+        # Close the session
+        session.close()
+
