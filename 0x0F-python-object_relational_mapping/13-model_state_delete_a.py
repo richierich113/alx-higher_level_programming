@@ -42,12 +42,13 @@ if __name__ == '__main__':
     session = Session()
 
     # Query State objects with a name containing the letter 'a'
-    states_to_delete = session.query(State).filter(State.name.like('%a%')).all()
+    states_to_delete = session.query(State)\
+    .filter(State.name.like('%a%')).all()
 
     # Delete each state object from the session
     for state in states_to_delete:
         session.delete(state)
-    
+
     # Commit the session to save changes to the database
     session.commit()
 
