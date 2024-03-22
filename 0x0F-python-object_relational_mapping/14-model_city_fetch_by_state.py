@@ -18,37 +18,20 @@ all `City` objects from the database `hbtn_0e_14_usa`:
 
 
 from sys import argv
-from sqlalchemy import create_engine
+
+from sqlalchemy import (create_engine)
+from model_state import Base, State
+from model_city import City
 from sqlalchemy.orm import sessionmaker
-from model_state import Base, State, City
 
 
 if __name__ == '__main__':
-    # Check if correct number of arguments are provided
-    if len(argv) != 4:
-        print("Usage: {} <username> <password> <database>".format(argv[0]))
-        exit(1)
-
-    # Extract arguments
-    username, password, database = argv[1:]
-
-    # Create engine to connect to MySQL server
     engine = create_engine(
-        f'mysql+mysqldb://{username}:{password}@localhost:3306/{database}')
-
-    # Bind the engine to the metadata of the Base class
-    Base.metadata.bind = engine
-
-    # Create a session
+        f'mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}')
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-
-    # Query all City objects and join with State to get state name
-    cities = session.query(City, State).join(State).order_by(City.id).all()
-
-    # Display the results
-    for city, state in cities:
-        print("{}: ({}) {}".format(state.name, city.id, city.name))
-
-    # Close the session
-    session.close()
+    for instance in session.query(City).order_by(City.id):
+        state_data = session.query(State).filter_by(id=instance.state_id).one()
+        state_name = state_data.name
+        print(f"{state_name}: ({instance.id}) {instance.name}")
