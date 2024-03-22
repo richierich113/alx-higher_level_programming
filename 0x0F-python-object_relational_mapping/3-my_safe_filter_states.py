@@ -37,5 +37,6 @@ def injection_safe_search_matching(username, passwd, db, searched_name):
     for search_results in cursor.fetchall():
         print(search_results)
 
+
 if __name__ == '__main__':
     injection_safe_search_matching(argv[1], argv[2], argv[3], argv[4])
