@@ -17,22 +17,18 @@ as password to access to your information
     -You don’t need to check arguments passed to the script (number or type)
 '''
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     import requests
-    from requests.auth import HTTPBasicAuth
-    import sys
-    url = "https://api.github.com/"
-    user_url = url + "user"
-    username = sys.argv[1]
-    password = sys.argv[2]
-    response = requests.get(user_url,
-                            auth=HTTPBasicAuth(username,
-                                               password))
-    if response.status_code == requests.codes.ok and len(response.text) > 0:
-        try:
-            my_obj = response.json()
-            print(my_obj.get('id'))
-        except ValueError as invalid_json:
-            print('Not a valid JSON')
-    else:
-        print(None)
+    from sys import argv
+    username, password_token = argv[1:3]
+    url = f'https://api.github.com/users/{username}'
+    headers = {
+        "User-Agent": "python-requests/2.27.1",
+        "Accept": "application/vnd.github+json",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Authorization": f"Bearer {password_token}"
+    }
+
+    res = requests.get(url, headers=headers)
+    jsonData = res.json()
+    print(jsonData.get('id'))
