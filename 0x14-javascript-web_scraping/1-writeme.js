@@ -20,7 +20,6 @@ const string = process.argv.slice(2)[1];
 // Use fs.writeFile() method to write to file
 fs.writeFile(filePath, string, 'utf-8', function (err) {
   if (err) {
-    return console.error(err);
+    return console.log(err);
   }
-  console.log(`File "${filePath}" has been written successfully.`);
 });
