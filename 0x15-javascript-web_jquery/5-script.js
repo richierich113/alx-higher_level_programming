@@ -18,4 +18,4 @@ add_list_item.on('click', function() {
 
 add_list_item.click(function() {
     list.append('<li>Item</li>');
-})
+});
