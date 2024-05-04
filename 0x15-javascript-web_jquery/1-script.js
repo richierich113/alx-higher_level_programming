@@ -9,7 +9,7 @@ You must use the JQuery API
 //once the HTML document is fully loaded and ready for interaction.
 $(function() {
     $('header').css('color', '#FF0000');
-})
+});
 
 //This is the extended form of the code above
 /*$(document).ready(function() {
