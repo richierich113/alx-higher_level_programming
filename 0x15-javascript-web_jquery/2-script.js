@@ -11,4 +11,4 @@ const red_header = $('DIV#red_header');
 
 red_header.click(function() {
     my_header.css('color', '#FF0000');
-})
+});
